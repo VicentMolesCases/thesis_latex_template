@@ -1,0 +1,96 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                    ThesisClass - Chapter sample
+% -----------------------------------------------------------------------
+%               Implemented by Vicent Moles-Cases (2022)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdefined \fullBuild
+	\graphicspath{{1_chap/ch_sample/figures/}}
+\else
+	\documentclass[bookType,partialBuild]{../../ThesisClass/ThesisClass}
+	\graphicspath{{figures/}}
+	\begin{document}
+\fi
+\ifdefined \bookType
+	\cleardoublepage
+\fi
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter[Short Title of Sample Chapter]{Title of Sample Chapter}
+
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+% ADD CHAPTER TEXT HERE
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+Example of reference to \figref{fig:example} and \tabref{tab:example}. Example of article cite \cite{Elliott2012}, book cite \cite{Sayed2003}, webpage cite \cite{FFTW}, and thesis cite \cite{SimonGalvez2014}. 
+
+Sample text from lipsum package: \lipsum[1-4]
+
+\begin{figure}[t!]
+\centering
+\includegraphics[width=0.53\textwidth]{fig_example.png}
+\caption[Short title for figure example in sample chapter.]{Figure example in sample chapter.}
+\label{fig:example}
+\end{figure}
+
+\begin{table}[!b]
+\centering
+\begin{tabular}{ccc}
+\toprule \toprule
+\multirow{5}{*}{{\hspace{0.3cm}\textbf{Frequency-Domain}}\hspace{0.3cm}} 
+& 
+\multirow{2}{*}{{\hspace{0.3cm}\textit{Energy cancellation}\hspace{0.3cm}}}  
+& 
+{\small ACC}
+\\
+\cmidrule{3-3}
+&                                                                     
+& 
+{\small EDM}
+\\
+\cmidrule{2-3}
+& 
+\multirow{2}{*}{{\hspace{0.3cm}\textit{Soundfield synthesis}\hspace{0.3cm}}} 
+& 
+{\small PM}
+\\
+\cmidrule{3-3}
+& 
+& 
+{\small $\textrm{wPM-F}$ }
+\\
+\toprule \toprule
+\end{tabular}
+\caption[Short title for table example in sample chapter.]{Table example in sample chapter.}
+\label{tab:example}
+\end{table}
+
+\section{Sample Section}
+Sample text from lipsum package: \lipsum[5-13] 
+
+
+
+\subsection{Sample Subsection}
+Sample text from lipsum package: \lipsum[14-20] 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CLOSING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdefined \partialBuild
+	\bibliography{../../3_biblio/ref}
+	\end{document}
+\fi
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	

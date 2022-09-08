@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%        Example of use of ThesisClass with the reportType option
+% -----------------------------------------------------------------------
+%               Implemented by Vicent Moles-Cases (2022)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ----------------------------- INITIALIZE ------------------------------
+\documentclass[reportType,fullBuild]{ThesisClass/ThesisClass}
+
+% ------------------------------ SET INFO -------------------------------
+\SetThesisTitle{Example of thesis report using the bookType option}
+\SetThesisAuthor{Thesis author}
+\SetThesisType{Thesis type}
+\SetThesisKeywords{keyword1, keyword2, keyword3,...}
+\SetThesisSupervisor{Thesis supervisor}
+\SetThesisLocation{City, Country}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% ---------------------------- FRONT MATTER -----------------------------
+% Define the page numbering style for the front matter
+\frontmatter
+% Include tex files that must appear in the front matter of the document
+\include{0_front_matter/0_titlepage}
+\include{0_front_matter/1_abstract}
+\include{0_front_matter/2_acknowledgements}
+\include{0_front_matter/3_list_of_contents} 
+\include{0_front_matter/4_acronyms}  
+\include{0_front_matter/5_notation}   
+\include{0_front_matter/6_list_of_figures}  
+\include{0_front_matter/7_list_of_tables}  
+
+% ------------------------------ CHAPTERS -------------------------------
+% Define the page numbering style for the rest of the document
+\mainmatter 
+% Include one tex file per chapter
+\include{1_chap/ch_sample/ch_sample}
+
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+% ADD FURTHER CHAPTERS HERE
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+% ----------------------------- APPENDICES ------------------------------
+% Start appendix
+\appendix \renewcommand\chaptername{Appendix}
+% Include one tex file per appendix
+\include{2_app/app_sample/app_sample}
+
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+% ADD FURTHER APPENDICES HERE
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+% ---------------------------- BIBLIOGRAPHY -----------------------------
+\include{3_biblio/bibliography}
+
+\end{document}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

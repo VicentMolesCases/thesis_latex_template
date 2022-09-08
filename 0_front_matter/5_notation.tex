@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                       ThesisClass - Notation
+% -----------------------------------------------------------------------
+%               Implemented by Vicent Moles-Cases (2022)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdefined \fullBuild
+	\graphicspath{{0_front_matter/figures/}}
+\else
+	\documentclass[bookType,partialBuild]{../ThesisClass/ThesisClass}
+	\graphicspath{{figures/}}
+	\begin{document}
+\fi
+\ifdefined \bookType
+	\cleardoublepage
+\fi
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Notation}
+\addcontentsline{toc}{chapter}{Notation}
+
+\newcommand\NotR[2]{#1 & #2\\}
+
+\renewcommand{\arraystretch}{1.18}
+\vspace{-0.2cm}
+\begin{longtable}{m{0.11\textwidth}m{0.85\textwidth}}
+\multicolumn{2}{l}{\textbf{Measurement units}\vspace{2pt}}
+\\
+\NotR{dB}{Decibel}
+\NotR{\vdots}{\vdots}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+% ADD FURTHER MEASUREMENT UNITS HERE WITH THE FOLLOWING STRUCTURE:
+% \NotR{symbol}{description}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+\\
+\multicolumn{2}{l}{\textbf{Operators}\vspace{2pt}}
+\\
+\NotR{$\ast$}{Linear convolution}  
+\NotR{\vdots}{\vdots}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+% ADD FURTHER OPERATORS HERE WITH THE FOLLOWING STRUCTURE:
+% \NotR{symbol}{description}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+\\
+\multicolumn{2}{l}{\textbf{Scalars}\vspace{2pt}}
+\\
+\NotR{$\beta$}{Regularization factor}
+\NotR{\vdots}{\vdots}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+% ADD FURTHER SCALARS HERE WITH THE FOLLOWING STRUCTURE:
+% \NotR{symbol}{description}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+\\
+\multicolumn{2}{l}{\textbf{Sets}\vspace{2pt}}
+\\
+\NotR{$\mathbb{R}$}{Set of real numbers}
+\NotR{\vdots}{\vdots}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+% ADD FURTHER SETS HERE WITH THE FOLLOWING STRUCTURE:
+% \NotR{symbol}{description}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+\\
+\multicolumn{2}{l}{\textbf{Vectors and matrices}\vspace{2pt}}
+\\
+\NotR{$\mathbf{a}$}{Vectors are represented by lower-case boldface letters}
+\NotR{$\mathbf{A}$}{Matrices are represented by upper-case boldface letters}
+\NotR{\vdots}{\vdots}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+% ADD FURTHER VECTORS AND MATRICES HERE WITH THE FOLLOWING STRUCTURE:
+% \NotR{symbol}{description}
+% <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+\end{longtable}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CLOSING %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifdefined \partialBuild
+	\end{document}
+\fi
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
