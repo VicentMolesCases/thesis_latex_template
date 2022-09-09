@@ -19,13 +19,14 @@ The provided latex template has the following structure:
 * `thesis.tex`: Main file, which includes all the files for the front matter, the chapters, the appendices, and the bibliography. 
 
 ### Set thesis info
-The class `ThesisClass.cls` provides a set of commands to set the information of the thesis. The following set of commands must be used in the preamble of `thesis.tex`:
-* `SetThesisTitle{}`: Used to set the title of the thesis.
-* `SetThesisAuthor{}`: Used to set the name of the author of the thesis.
-* `SetThesisType{}`: Used to set the type of thesis, e.g., BSc thesis, MSc thesis, or PhD thesis.
-* `SetThesisKeywords{}`: Used to set the keywords that appear in the abstract section of the thesis.
-* `SetThesisSupervisor{}`: Used to set the name of the supervisor of the thesis.
-* `SetThesisLocation{}`: Used to set the location in which the thesis has been carried out. 
+The class `ThesisClass.cls` provides a set of commands to set the information of the thesis. The following set of commands can be used in the preamble of `thesis.tex` (some of them are compulsory and some of the are optional):
+* `SetThesisTitle{}`: Used to set the title of the thesis. [Compulsory]
+* `SetThesisAuthor{}`: Used to set the name of the author of the thesis. [Compulsory]
+* `SetThesisType{}`: Used to set the type of thesis, e.g., BSc thesis, MSc thesis, or PhD thesis. [Optional]
+* `SetThesisSupervisor{}`: Used to set the name of the supervisor of the thesis. [Optional]
+* `SetThesisLocation{}`: Used to set the location in which the thesis has been carried out. [Optional]
+* `SetThesisKeywords{}`: Used to set the keywords that appear in the abstract section of the thesis. [Optional]
+
 
 ### Adding new chapter/appendix
 To add a new chapter/appendix to the report you must:
