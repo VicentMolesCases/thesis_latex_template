@@ -132,27 +132,49 @@
 \ifpdf \hypersetup{pdfinfo = {Author = {\ThesisAuthor},}} \fi 
 }
 % Command to set thesis type
-\newcommand{\ThesisType}{Empty Type} 
 \newcommand{\SetThesisType}[1]{
-\renewcommand{\ThesisType}{#1} 
+\newcommand{\ThesisType}{#1} 
 \ifpdf \hypersetup{pdfinfo = {Subject = {\ThesisType},}} \fi 
 }
 % Command to set thesis keywords
-\newcommand{\ThesisKeywords}{Empty Keyword} 
 \newcommand{\SetThesisKeywords}[1]{
-\renewcommand{\ThesisKeywords}{#1} 
+\newcommand{\ThesisKeywords}{#1} 
 \ifpdf \hypersetup{pdfinfo = {Keywords = {\ThesisKeywords},}} \fi 
 }
-% Command to set thesis supervisor
-\newcommand{\ThesisSupervisor}{Empty Supervisor} 
+% Command to set thesis supervisor 
 \newcommand{\SetThesisSupervisor}[1]{
-\renewcommand{\ThesisSupervisor}{#1} 
+\newcommand{\ThesisSupervisor}{#1} 
 }
 % Command to set thesis location
-\newcommand{\ThesisLocation}{Empty Location} 
 \newcommand{\SetThesisLocation}[1]{
-\renewcommand{\ThesisLocation}{#1} 
+\newcommand{\ThesisLocation}{#1} 
 }
+% Command to set institution logo
+\newcommand{\SetThesisLogo}[1]{
+\newcommand{\ThesisLogoPath}{#1} 
+}
+%% Command to set thesis type
+%\newcommand{\ThesisType}{Empty Type} 
+%\newcommand{\SetThesisType}[1]{
+%\renewcommand{\ThesisType}{#1} 
+%\ifpdf \hypersetup{pdfinfo = {Subject = {\ThesisType},}} \fi 
+%}
+%% Command to set thesis keywords
+%\newcommand{\ThesisKeywords}{Empty Keyword} 
+%\newcommand{\SetThesisKeywords}[1]{
+%\renewcommand{\ThesisKeywords}{#1} 
+%\ifpdf \hypersetup{pdfinfo = {Keywords = {\ThesisKeywords},}} \fi 
+%}
+%% Command to set thesis supervisor
+%\newcommand{\ThesisSupervisor}{Empty Supervisor} 
+%\newcommand{\SetThesisSupervisor}[1]{
+%\renewcommand{\ThesisSupervisor}{#1} 
+%}
+%% Command to set thesis location
+%\newcommand{\ThesisLocation}{Empty Location} 
+%\newcommand{\SetThesisLocation}[1]{
+%\renewcommand{\ThesisLocation}{#1} 
+%}
 % ----------------------------- REFERENCES ------------------------------
 \newcommand{\figref}[1]{Fig.~\ref{#1}}
 \newcommand{\tabref}[1]{Table~\ref{#1}} 

@@ -9,10 +9,8 @@
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifdefined \fullBuild
-	\graphicspath{{0_front_matter/figures/}}
 \else
 	\documentclass[bookType,partialBuild]{../ThesisClass/ThesisClass}
-	\graphicspath{{figures/}}
 	\begin{document}
 \fi
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -28,28 +26,30 @@
 \begin{center}
 
 % -------------------------- INSTITUTION LOGO ---------------------------
-% Spacing according to mode
-\ifthenelse{\equal{\mode}{print}}
-{
-}{
-\ifthenelse{\equal{\mode}{pdf}}
-{
-\vspace*{1.5cm}
-}{}
-}
+\ifdefined \ThesisLogoPath
+	% Spacing according to mode
+	\ifthenelse{\equal{\mode}{bookType}}
+	{
+	}{
+	\ifthenelse{\equal{\mode}{reportType}}
+	{
+	\vspace*{1.5cm}
+	}{}
+	}
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=0.24\textwidth]{logo.png}
-\end{figure}
+	\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.24\textwidth]{\ThesisLogoPath}
+	\end{figure}
+\fi
 
 % --------------------------- DOCUMENT TYPE -----------------------------
-{
-\large
-\ThesisType
-\\
-\vspace*{1cm}
-}
+\ifdefined \ThesisType
+	\large
+	\ThesisType
+	\\
+	\vspace*{1cm}
+\fi
 
 % -------------------------------- TITLE --------------------------------
 \rule{\textwidth}{.1mm}
@@ -72,19 +72,25 @@ by\\
 }
 
 % ----------------------------- SUPERVISOR -----------------------------
-\small
-Supervisor:
-\\
-\vspace*{0.2cm}
-\large
-\ThesisSupervisor
-\\
-\vspace*{1.5cm}
+\ifdefined \ThesisSupervisor
+	\small
+	Supervisor:
+	\\
+	\vspace*{0.2cm}
+	\large
+	\ThesisSupervisor
+	\\
+	\vspace*{1.5cm}
+\fi
+
 
 % -------------------------- DATE AND LOCATION --------------------------
 \normalsize
-\ThesisLocation 
-\\
+\ifdefined \ThesisLocation
+	\ThesisLocation 
+	\\
+\fi
+
 \monthyeardate\today
 
 \end{center}
