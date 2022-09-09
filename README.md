@@ -1,5 +1,5 @@
 # thesis_latex_template
-Template to generate the report for a BSc/MSc/PhD thesis using the implemented latex class `ThesisClass.cls`. 
+Template to generate the report for a BSc/MSc/PhD thesis using the implemented LaTeX class `ThesisClass.cls`. 
 
 ### Main features
 
@@ -10,7 +10,7 @@ The `ThesisClass.cls` class supports options to build the whole document (`fullB
 
 
 ### Template structure
-The provided latex template has the following structure:
+The provided LaTeX template has the following structure:
 * `ThesisClass/`: Folder containing the class file `ThesisClass.cls` and the bibliography style file `IEEEtranN_mod.bts`
 * `0_front_matter/`: Folder containing the files included in the front matter of the document, i.e., the title page, the abstract, the acknowledgements, the list of contents, the list of acronyms, the notation, the list of figures, and the list of tables.
 * `1_chap/`: Folder containing the files for the different chapters of the document.
@@ -61,5 +61,8 @@ The preamble and the closing sections allow to build the whole thesis report or 
 
 3. Add to `new_chapter/` the `figures/` folder, which includes the pictures for the new chapter/appendix.
 4. Add the code `\include{1_chap/new_chapter/new_chapter}` in the Chapter or Appendix sections of `thesis.tex`.
+
+### Adding new references
+To add a new reference to the document a new BibTeX entry must be included in the file `3_biblio/ref.bib`. The biblography style can be found in `ThesisClass/IEEEtranN_mod.bst`, which is a modified version of the `IEEEtranN.bst` style (https://www.bibtex.com/s/bibliography-style-ieeetran-ieeetrann/).
 
 
